@@ -1,4 +1,3 @@
-
 // height of the base
 h_base = 5;
 // lower base chamfer "radius"
@@ -14,7 +13,9 @@ r_fo2 = 3.2 / 2;
 // outside radii 3
 r_fo3 = 1.6 / 2;
 // length of a grid unit
-l_grid = 42;
+if (is_undef(l_grid)) {
+    l_grid = 42;
+}
 
 
 // Outside rounded radius of bin
@@ -24,7 +25,10 @@ r_base = r_fo1;
 // screw hole radius
 r_hole1 = 1.5;
 // magnet hole radius
-r_hole2 = 3.25;
+if (is_undef(r_hole2)) {
+    r_hole2 = 3.25;
+}
+
 // center-to-center distance between holes
 d_hole = 26;
 // distance of hole from side of bin
